@@ -1,0 +1,214 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --botao-azul-efeito: #3c92fa;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: "Inter", sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+}
+
+/* ======== SEÇÃO PRINCIPAL ======== */
+.principal {
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5% 10%;
+}
+
+/* GRID */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Caixa de texto */
+.container__caixa {
+    flex: 1;
+}
+
+.container__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.container__aviso {
+    font-size: 0.9rem;
+    color: var(--cinza-secundario);
+}
+
+.container__imagem {
+    width: 100%;
+    max-width: 380px;
+    margin: 1.5rem 0;
+}
+
+/* Botões */
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--branco-principal);
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0;
+    transition: 0.3s ease;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+/* ======== SEÇÃO SECUNDÁRIA ======== */
+.secundario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+    gap: 60px;
+}
+
+.secundario__imagem {
+    width: 100%;
+    max-width: 480px;
+}
+
+.container__descricao {
+    flex: 1;
+}
+
+.descricao__titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.descricao__texto {
+    font-size: 1.1rem;
+    color: var(--cinza-secundario);
+}
+
+/* ======== DISPOSITIVOS ======== */
+.dispositivos {
+    text-align: center;
+    padding: 6% 10%;
+}
+
+.dispositivos__titulo {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+
+.lista__item {
+    font-size: 1.8rem;
+}
+
+/* ======== RODAPÉ ======== */
+.rodape {
+    padding: 3% 10%;
+    text-align: center;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.rodape__texto {
+    font-size: 0.9rem;
+    color: var(--cinza-secundario);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 1200px) {
+    .container,
+    .secundario {
+        flex-direction: column;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .container__imagem,
+    .secundario__imagem {
+        max-width: 300px;
+    }
+
+    .container__caixa,
+    .container__descricao {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .principal {
+        padding: 10% 5%;
+    }
+
+    .descricao__titulo {
+        font-size: 2rem;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container__titulo {
+        font-size: 1.6rem;
+    }
+
+    .descricao__texto {
+        font-size: 1rem;
+    }
+
+    .container__imagem,
+    .secundario__imagem {
+        max-width: 250px;
+    }
+}
