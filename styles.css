@@ -1,0 +1,227 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --botao-azul-efeito: #3c92fa;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+}
+
+/* Seção principal estilo Netflix */
+.principal {
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 6em 2em;
+}
+
+/* Grid principal */
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caixa de texto */
+.container__caixa {
+    margin: 0 6em;
+}
+
+/* Títulos */
+.container__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container__aviso {
+    font-size: 0.8rem;
+    color: var(--cinza-secundario);
+}
+
+/* Imagem */
+.container__imagem {
+    margin: 1em 0 2em;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Textos */
+.descricao__titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+.descricao__texto {
+    font-size: 1.1rem;
+    color: var(--cinza-secundario);
+}
+
+/* Botões padrão Netflix */
+.container__botao {
+    background-color: var(--botao-azul);
+    padding: 1em;
+    border-radius: 5px;
+    display: block;
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-bottom: 1em;
+    transition: 0.3s;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+/* Seção secundária */
+.secundario {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin: 0 10em;
+}
+
+.secundario__imagem {
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Dispositivos */
+.dispositivos {
+    text-align: center;
+    padding: 5em 2em;
+}
+
+.dispositivos__titulo {
+    font-size: 3rem;
+    margin-bottom: 1.2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    list-style: none;
+}
+
+.lista__item {
+    font-size: 2rem;
+}
+
+/* Rodapé */
+.rodape {
+    padding: 5em 3em;
+    text-align: center;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.rodape__texto {
+    font-size: 0.9rem;
+    color: var(--cinza-secundario);
+    margin-top: 1em;
+}
+
+/* ====================== */
+/*    RESPONSIVIDADE      */
+/* ====================== */
+
+/* Telas até 1200px — mesmo padrão do seu 2º código */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 100%;
+        padding: 4em 0;
+    }
+
+    .container__caixa {
+        margin: 0 3em;
+        text-align: center;
+    }
+
+    .secundario {
+        flex-direction: column;
+        margin: 0 3em;
+        text-align: center;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .container__titulo {
+        font-size: 1.8rem;
+    }
+
+    .descricao__titulo {
+        font-size: 2.4rem;
+    }
+
+    .container__caixa,
+    .secundario {
+        margin: 0 2em;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .lista__item {
+        font-size: 1.6rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .descricao__titulo {
+        font-size: 2rem;
+    }
+
+    .container__caixa,
+    .secundario {
+        margin: 0 1em;
+    }
+
+    .container__imagem {
+        max-width: 280px;
+    }
+}
