@@ -1,0 +1,100 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --botao-azul-efeito: #3c92fa;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+}
+
+/* =========================================================
+   HERO SECTION (COM BACKGROUND RESPONSIVO)
+========================================================= */
+
+.principal {
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;      /* garante que preenche toda a tela */
+    background-position: center;
+    min-height: 100vh;           /* garante visibilidade no mobile */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 1.5em;
+}
+
+/* GRID GERAL */
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 2em;
+}
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.container__caixa {
+    max-width: 600px;
+    text-align: center;
+}
+
+.container__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container__imagem {
+    width: 100%;
+    max-width: 350px;
+    margin: 1.5em auto 2em;
+    display: block;
+}
+
+.container__aviso {
+    font-size: 0.9rem;
+    color: var(--cinza-secundario);
+    margin-top: 0.5em;
+}
+
+/* BOTÕES */
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    transition: 0.3s ease;
+    font-weight: 700;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.botao_secundario {
+    border: 2px solid var(--branco-principal);
+    background-color: transparent;
+}
+
+/* ======================*
