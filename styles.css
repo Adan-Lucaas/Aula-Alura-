@@ -204,3 +204,22 @@ body {
     .devices__list {
         flex-direction: column;
     }
+}
+
+.footer1 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--primaria);
+    color: var(--claro);
+}
+
+.footer1 a {
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer1 a:hover {
+    text-decoration: underline;
+}
